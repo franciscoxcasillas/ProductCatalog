@@ -21,7 +21,7 @@ struct ContentView: View {
             LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 1, green: 0.8448439963, blue: 0.6209953235, alpha: 1)), .white]), 
                                    startPoint: .top, 
                                    endPoint: .bottom)
-                        .ignoresSafeArea()
+            .edgesIgnoringSafeArea(.all)
             VStack {
                 Text("Product Catalog")
                     . font(.custom( "Montserrat-Bold", size: 25))
@@ -29,7 +29,6 @@ struct ContentView: View {
                 ProductListView()
             }
         }
-        
     }
 }
 
@@ -52,6 +51,7 @@ struct ProductRowView: View {
             }
             Image(systemName: "heart.fill")
         }
+        .background()
     }
 }
 
